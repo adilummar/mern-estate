@@ -29,7 +29,7 @@ export default function Header() {
             <Link to={"/about"}>
               <li className="hidden sm:inline hover:underline">About</li>
             </Link>
-            <Link to={"signin"}>
+            <Link to={"sign-in"}>
               <li className="hover:underline">Sign in</li>
             </Link>
           </ul>
