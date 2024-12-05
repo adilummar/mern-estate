@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import userRouter from "./routers/user.route.js";
 import authRouter from "./routers/auth.route.js";
+import listingRouter from "./routers/listing.route.js"
 import cors from 'cors'
 import cookieParser from "cookie-parser";
 
@@ -29,6 +30,7 @@ mongoose
 
 app.use("/api/user", userRouter);
 app.use("/api/auth", authRouter);
+app.use("/api/listing",listingRouter)
 
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
