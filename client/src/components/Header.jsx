@@ -32,7 +32,7 @@ export default function Header() {
               <li className="hidden sm:inline hover:underline">About</li>
             </Link>
             <Link to={"/profile"}>
-              {currentUser ? (
+              {currentUser.avathar ? (
                 <img src={currentUser.avathar} alt="profile" className="rounded-full w-7 object-cover"/>
               ) : (
                 <li className="hover:underline">Sign in</li>
