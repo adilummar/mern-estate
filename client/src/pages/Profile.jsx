@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import {
   deleteUserFailiur,
   deleteUserStart,
@@ -133,10 +134,16 @@ export default function Profile() {
         />
         <button
           disabled={loading}
-          className="bg-slate-800 text-white rounded-lg p-3"
+          className="bg-slate-800 text-white rounded-lg p-3 hover:opacity-90"
         >
-          {loading ? "loading..." : "Update"}
+          {loading ? "loading..." : "UPDATE"}
         </button>
+        <Link
+          className="bg-green-800 text-white p-3 rounded-lg text-center hover:opacity-90"
+          to={"/create-listing"}
+        >
+          CREATE LISTING
+        </Link>
       </form>
       <div className="flex justify-between mt-3">
         <span onClick={handleDelete} className="text-red-700">
